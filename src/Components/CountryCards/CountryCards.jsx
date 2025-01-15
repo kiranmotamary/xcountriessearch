@@ -37,7 +37,7 @@ return (
         <div className={styles.cards}>
             {(countryName?filteredCountries:countries).map((country)=>(
                 <div className={styles.countryCard}>
-                    <img src={country.png} alt={country.png} style={{height:"100px",width:"100px"}}/>
+                    <img src={country.png} alt={country.common} style={{height:"100px",width:"100px"}}/>
                     <h3>{country.common}</h3>
                 </div>
             ))}
