@@ -1,5 +1,5 @@
 import React,{useEffect,useState,useRef} from "react";
-import styles from "./CountryCards.module.css"
+import styles from "./CountryCards.css"
 const CountryCards =()=>{
     const [countries,setCountries]=useState([]);
     const [countryName,setCountryName]=useState("");
@@ -32,11 +32,11 @@ const CountryCards =()=>{
         ))) 
     },[countryName,countries])
 return (
-    <div className={styles.container}>
+    <div className="container">
         <input type="text" placeholder ="search a country" style={{width:"350px"}} onChange={handleSearch}/>
-        <div className={styles.cards}>
+        <div className="cards">
             {(countryName?filteredCountries:countries).map((country)=>(
-                <div className={styles.countryCard}>
+                <div className="countryCard">
                     <img src={country.png} alt={country.common} style={{height:"100px",width:"100px"}}/>
                     <h2>{country.common}</h2>
                 </div>
